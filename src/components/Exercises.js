@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 
-const Exercises = ({exercises,setExercises,bodyPart}) => {
+const Exercises = ({bodyPart,exercises,setExercises}) => {
     const [currentPage,setCurrentPage] = useState(1);
     const exercisePerPage = 9;
 
@@ -32,7 +32,8 @@ const Exercises = ({exercises,setExercises,bodyPart}) => {
             setExercises(exercisesData);
         }
         fetchExercisesData();
-    },[bodyPart])
+    }, [bodyPart , setExercises])
+
     return (
         <Box id="exercises"
          sx={{mt: {lg :'110px'}}}

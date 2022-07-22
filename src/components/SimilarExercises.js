@@ -1,7 +1,6 @@
 import { Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
-import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import ExerciseCard from './ExerciseCard';
 
 const SimilarExercises = ({ targetExercise, equipmentExercise }) => {
