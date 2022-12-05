@@ -7,11 +7,10 @@ const ExerciseVideos = ({ exerciseVideos, exerciseName }) => {
             <Typography variant="h3" mb="50px" fontWeight =" bold">
                 Watch <span style={{ color: '#ff2625', textTransform: 'capitalize' }}>{exerciseName}</span> exercise videos
             </Typography>
-            <Stack justifyContent="flex-start" flexWrap="wrap" alignItems="center"
+            <Stack flexWrap="wrap" justifyContent="center" alignItems="center"
                 sx={{
-                    flexDirection: { lg: 'row' },
-                    gap: { lg: '50px'  },
-                    
+                    flexDirection: { lg: 'row',xs:'row' },
+                    gap: '30px'    
                 }}
             >
                 {
@@ -23,12 +22,13 @@ const ExerciseVideos = ({ exerciseVideos, exerciseName }) => {
                             rel="noreferrer"
                             className="exercise-video"
                         >
-                            <img src={item.video.thumbnails[0].url} alt={item.video.title} />
+                            <img style={{borderRadius:'10px'}} src={item.video.thumbnails[0].url} alt={item.video.title} />
+                            <h3 style={{color :'red'}}> Play video</h3>
                             <Box>
                                 <Typography color=" #000" mb="10px" fontWeight="bold">
                                     {item.video.title}
                                 </Typography>
-                                <Typography variant="p" color="#000" >
+                                <Typography variant="p" color="#000"  >
                                     {item.video.channelName}
                                 </Typography>
                             </Box>

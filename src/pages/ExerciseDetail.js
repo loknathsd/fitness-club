@@ -17,8 +17,6 @@ const ExerciseDetail = () => {
     const { id } = useParams();
     
 
-
-
     useEffect(() => {
         const fetchExercisesData = async () => {
 

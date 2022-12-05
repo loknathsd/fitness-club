@@ -5,7 +5,7 @@ import  BannerLogo from '../assets/images/banner.png';
 const BannerHero = () => {
     return (
         <Box sx={{
-            mt: { lg: '150px', xs: '70px' },
+            mt: { lg: '100px', xs: '70px' },
             ml: { xs: '50px' }
         }} position='relative' padding="20px">
             <Typography color="#FF2625"

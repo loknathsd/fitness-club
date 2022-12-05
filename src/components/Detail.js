@@ -13,14 +13,17 @@ const Detail = ({ exerciseDetail }) => {
 
     const extraDetail = [
         {
+            id: 1,
             name :bodyPart,
             icon : bodyPartImage
         },
         {
+            id: 2,
             name :target,
             icon : targetImage
         },
         {
+            id: 3,
             name :equipment,
             icon : equipmentImage
         },
@@ -42,7 +45,7 @@ const Detail = ({ exerciseDetail }) => {
 
                 </Typography>
                 {extraDetail.map((item)=>(
-                    <Stack key={item.name} direction="row" gap="24px" alignItems="center" >
+                    <Stack key={item.id} direction="row" gap="24px" alignItems="center" >
                         <Button sx={{background:'#fff2db', borderRadius:'50%', height:'100px',width: '100px'}}>
                             <img src={item.icon} alt={bodyPart} style={{width:'50px',height:'50px'}} />
                         </Button>
